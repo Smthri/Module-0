@@ -1,6 +1,6 @@
 # MiniTorch Module 0  
 
-<img src="https://github.com/Smthri/Module-0/.github/workflows/python-package.yml" width="20px">
+<img src="https://github.com/Smthri/Module-0/.github/workflows/python-package.yml/badge.svg" width="20px">
 
 <img src="https://minitorch.github.io/_images/match.png" width="100px">
 
