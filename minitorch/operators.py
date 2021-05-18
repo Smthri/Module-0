@@ -143,8 +143,7 @@ def zipWith(fn):
         applying fn(x, y) one each pair of elements.
 
     """
-    # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    return lambda x, y: [fn(*z) for z in zip(x, y)]
 
 
 def addLists(ls1, ls2):
@@ -169,21 +168,26 @@ def reduce(fn, start):
         fn(x_1, x_0)))`
 
     """
-    # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+
+    def reduce_core(ls, y=start):
+        for x in ls:
+            y = fn(x, y)
+        return y
+
+    return reduce_core
 
 
 def sum(ls):
     """
     Sum up a list using :func:`reduce` and :func:`add`.
     """
-    # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    fn = reduce(add, 0.0)
+    return fn(ls)
 
 
 def prod(ls):
     """
     Product of a list using :func:`reduce` and :func:`mul`.
     """
-    # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    fn = reduce(mul, 1.0)
+    return fn(ls)
