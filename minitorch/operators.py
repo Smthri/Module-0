@@ -52,12 +52,11 @@ def sigmoid(x):
     for stability.
 
     """
-
-    if x >= 0:
+    if x >= 0.0:
         return 1.0 / (1.0 + math.exp(-x))
-    else:
-        e = math.exp(x)
-        return e / (1.0 + e)
+
+    e = math.exp(x)
+    return e / (1.0 + e)
 
 
 def relu(x):
@@ -66,13 +65,12 @@ def relu(x):
 
     (See `<https://en.wikipedia.org/wiki/Rectifier_(neural_networks)>`_ .)
     """
-    return x if x > 0 else 0
+    return x if x > 0 else 0.0
 
 
 def relu_back(x, y):
     ":math:`f(x) =` y if x is greater than 0 else 0"
-
-    return y if x > 0 else 0
+    return y if x > 0.0 else 0.0
 
 
 EPS = 1e-6
